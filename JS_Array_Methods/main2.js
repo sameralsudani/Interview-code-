@@ -68,9 +68,8 @@ const foundName = items.find((item) => {
 });
 
 console.log("foundName", foundName);
-// [
-//     {
-//       name: "Book",
-//       price: 5,
-//     },
-//  ];
+
+//  {
+//     name: "Book",
+//     price: 5,
+//  }
