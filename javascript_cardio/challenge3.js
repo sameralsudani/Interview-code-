@@ -45,7 +45,7 @@ function diffArray(arr1, arr2) {
     console.log(union)  // => [1,2,3,5,4]   we have all unique values from both arrays 
 
     const symDiff=[];
-    for (let i = 0; i < union.length; i++) {
+    for (let i = 0; i < union.length; i++) { //we are looping through union from union[0] going up to union[3] (union[3])
         const currentEl = union[i];
 
         if (arr1.includes(currentEl) && !arr2.includes(currentEl)) { // if currentEl is in arr1 and not in arr2
