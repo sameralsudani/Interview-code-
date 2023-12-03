@@ -35,3 +35,41 @@ console.log("slciedNames", slciedNames); //  ["Joe", "Sarah"];
 
 const slciedNames2 = names.slice(1); // slice/cut at index/positon 1 till the end (last index included) and store it a variable (slciedNames2)
 console.log("slciedNames2", slciedNames2); //  ["Joe", "Sarah", "Molly"];
+
+// names.indexOf()
+const names4 = ["sam", "ali", "sarah", "ali"];
+const index = names4.indexOf("ali"); // find first index of 'ali'
+console.log("index", index); //  1
+
+const index2 = names4.lastIndexOf("ali"); // find last index of 'ali'
+console.log("index", index); //  3
+
+// nums.flat(): to flat/smooth nested array (remove internal brackets) from the main array
+let nums = [1, 2, 3, 4, [5, 6], 7];
+let flatArr = nums.flat(); // by default flat()= flat(1) which flats 1 nested array level
+console.log("flatArr", flatArr); // [1, 2, 3, 4, 5, 6, 7]
+
+let nums2 = [1, 2, 3, 4, [5, 6, [7, 8]], 9];
+let flatArr2 = nums2.flat(2); // flat(2) which flats 2 nested array level
+console.log("flatArr2", flatArr2); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// names.forEach():
+let count = 0;
+names.forEach((name) => {
+  count++;
+});
+console.log("count", count); //5
+
+// for loop
+for (let i = 2; i < names.length; i = i + 2) {
+  console.log(names[i]);
+  // Sarah
+  // Joe
+}
+
+// nums3.map()
+let nums3 = [1, 2, 3, 4, 5, 6];
+let doubledNums3 = nums3.map((n) => {
+  return n * 2;
+});
+console.log(doubledNums3); // [2,4,6,8,10,12]
