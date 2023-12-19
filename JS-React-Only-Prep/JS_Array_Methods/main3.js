@@ -73,3 +73,52 @@ let doubledNums3 = nums3.map((n) => {
   return n * 2;
 });
 console.log(doubledNums3); // [2,4,6,8,10,12]
+
+// *************************
+// How to Get Distinct Values From an Array of Objects in JavaScript?
+const array = [
+  {
+    name: "Joe",
+    age: 17,
+  },
+  {
+    name: "Bob",
+    age: 17,
+  },
+  {
+    name: "Carl",
+    age: 35,
+  },
+];
+
+// solution 1
+const unique = [...new Set(array.map((item) => item.age))];
+console.log(unique); // [17, 35]
+
+// solution 2
+const unique2 = Array.from(new Set(array.map((item) => item.age)));
+console.log(unique2); // [17, 35]
+
+// How to get array of unique objects by key (ex: age) or remove duplicate objects
+const array2 = [
+  { name: "Joe", age: 17 },
+  { name: "Bob", age: 17 },
+  { name: "Carl", age: 35 },
+];
+
+const key = "age";
+
+const arrayUniqueByKey = [
+  ...new Map(array2.map((item) => [item[key], item])).values(),
+];
+
+console.log(arrayUniqueByKey);
+
+/*OUTPUT
+       [
+        { "name": "Bob", "age": 17 },
+        { "name": "Carl", "age": 35 }
+       ]
+   */
+
+// Note: this will pick the last duplicated item in the list.
