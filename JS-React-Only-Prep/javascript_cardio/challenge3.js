@@ -63,3 +63,38 @@ function diffArray(arr1, arr2) {
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]); // => [4]
 diffArray([1, 2, 3, 5, 6], [1, 2, 3, 4, 5]); // => [6,4]
+
+// Filter unique vaules
+const array = [1, 1, 2, 3, 6, 6, 3, 1];
+const uniqueArray = [...new Set(array)]; // [1,2,3,6]
+
+// Convert number to boolean
+const isTrue = !0;
+const isFalse = !!0;
+
+console.log(isTrue, typeof isTrue); // true boolean
+
+// Convert number to string
+const val = 5 + ""; // 5
+console.log(val, typeof val); // 5 string
+
+// Convert string to int
+let int = "15";
+int = +int;
+console.log(int, typeof int); // 15 number
+
+// Convert float to int
+let int2 = 19.8 | 0;
+console.log(int2, typeof int2); // 19 number
+
+// Remove last digit from a number
+const int3 = (1553 / 10) | 0;
+console.log(int3, typeof int3); // 155 number
+
+// Turncate an array
+let array2 = [0, 1, 2, 3, 4, 5];
+array.length = 3; // [0,1,2]
+
+// Last item in array
+let array3 = [0, 1, 2, 3];
+array.slice(-1); // 3
