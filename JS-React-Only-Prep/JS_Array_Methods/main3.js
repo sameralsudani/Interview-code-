@@ -20,13 +20,13 @@ console.log("joinedNames", joinedNames); // returns one combined array : =>  ["D
 const joinedNames2 = names.concat(names2, names3);
 console.log("joinedNames2", joinedNames2); // returns one combined array : =>  ["Danny", "Joe", "Sarah", "Molly", "Ali", "Hasan", "Jaffar", "Hiba"]
 
-// namesCopy.spilce(): remove or add element to an array, this method will change/mutate the original array
+// namesCopy.spilce(): remove or add item to an array, this method will change/mutate the original array
 const namesCopy = [...names];
-namesCopy.splice(1, 1); //  At index/positon 1, remove 1 element.
+namesCopy.splice(1, 1); //  At index/positon 1, remove 1 item.
 console.log("namesCopy", namesCopy); //  ["Danny", "Sarah", "Molly"];
 
 const namesCopy2 = [...names];
-namesCopy.splice(1, 2, "Bill", "Bob"); //At index/positon 1, remove 2 elements then replece them with 'Bill', 'Bob'
+namesCopy.splice(1, 2, "Bill", "Bob"); //At index/positon 1, remove 2 items then replece them with 'Bill', 'Bob'
 console.log("namesCopy2", namesCopy2); //  ["Danny", "Bill", "Bob", "Molly"];
 
 // names.slice()
