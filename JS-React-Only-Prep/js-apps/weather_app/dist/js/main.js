@@ -3,7 +3,7 @@ import {
   getHomeLocation,
   getWeatherFromCoords,
   getCoordsFromApi,
-  cleanText
+  cleanText,
 } from "./dataFunctions.js";
 import {
   setPlaceholderText,
@@ -11,10 +11,13 @@ import {
   displayError,
   displayApiError,
   updateScreenReaderConfirmation,
-  updateDisplay
+  updateDisplay,
 } from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
-const currentLoc = new CurrentLocation();
+const currentLoc = new CurrentLocation(); // create a location object which cab be used as local state for data that we can get and set using the object methods
+
+// Silmilary in React, we have useState hook for data
+// const [state, setState] = useState({})
 
 const initApp = () => {
   // add listeners
@@ -56,7 +59,7 @@ const geoSuccess = (position) => {
   const myCoordsObj = {
     lat: position.coords.latitude,
     lon: position.coords.longitude,
-    name: `Lat:${position.coords.latitude} Long:${position.coords.longitude}`
+    name: `Lat:${position.coords.latitude} Long:${position.coords.longitude}`,
   };
   setLocationObject(currentLoc, myCoordsObj);
   updateDataAndDisplay(currentLoc);
@@ -86,7 +89,7 @@ const displayHomeLocationWeather = (home) => {
       lat: locationJson.lat,
       lon: locationJson.lon,
       name: locationJson.name,
-      unit: locationJson.unit
+      unit: locationJson.unit,
     };
     setLocationObject(currentLoc, myCoordsObj);
     updateDataAndDisplay(currentLoc);
@@ -101,7 +104,7 @@ const saveLocation = () => {
       name: currentLoc.getName(),
       lat: currentLoc.getLat(),
       lon: currentLoc.getLon(),
-      unit: currentLoc.getUnit()
+      unit: currentLoc.getUnit(),
     };
     localStorage.setItem("defaultWeatherLocation", JSON.stringify(location));
     updateScreenReaderConfirmation(
@@ -138,7 +141,7 @@ const submitNewLocation = async (event) => {
         lon: coordsData.coord.lon,
         name: coordsData.sys.country
           ? `${coordsData.name}, ${coordsData.sys.country}`
-          : coordsData.name
+          : coordsData.name,
       };
       setLocationObject(currentLoc, myCoordsObj);
       updateDataAndDisplay(currentLoc);
