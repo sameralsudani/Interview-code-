@@ -37,7 +37,7 @@ const DELETE = "delete",
 ENTRY_LIST = JSON.parse(localStorage.getItem("entry_list")) || [];
 updateUI();
 
-// EVENT LISTENERS
+// EVENT LISTENERS (Handelers)
 expenseBtn.addEventListener("click", function () {
   show(expenseEl);
   hide([incomeEl, allEl]);
