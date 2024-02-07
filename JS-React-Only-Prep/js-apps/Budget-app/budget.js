@@ -35,6 +35,8 @@ const DELETE = "delete",
 
 // LOOK IF THERE IS SAVED DATA IN LOCALSTORAGE
 ENTRY_LIST = JSON.parse(localStorage.getItem("entry_list")) || [];
+
+// It runs intially and at every refresh
 updateUI();
 
 // EVENT LISTENERS (Handelers)
@@ -129,6 +131,7 @@ function editEntry(entry) {
 }
 
 function updateUI() {
+  console.log("🚀 ~ updateUI ~ updateUI:");
   income = calculateTotal("income", ENTRY_LIST);
   outcome = calculateTotal("expense", ENTRY_LIST);
   balance = Math.abs(calculateBalance(income, outcome));
