@@ -195,7 +195,7 @@ console.log(combined);
 
   [(4, 5, 6, 7)].join(" ") // 4 5 6 7 (string)
 
-  [(4, 5, 6, 7)].shift() // [5,6,7] (reomve first)
+  [(4, 5, 6, 7)].shift() // [5,6,7] (remove first)
 
   [(4, 5, 6, 7)].reverse() // [7,6,5,4]
 

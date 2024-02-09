@@ -11,7 +11,7 @@ const lowerCaseStr = course.toLowerCase(); // returns a string in all lower case
 const fisrtA = course.indexOf("a"); // finds and returns an index (position) of first char 'a' in a string => 1
 const lastA = course.lastIndexOf("a"); // finds and returns an index (position) of first char 'a' in a string => 3
 
-const slicedStr = course.slice(0, 10); // slice/cut a string from index 0 to index 10 (index 10 not incudes) and store it in slicedStr => JavaScript is cool
+const slicedStr = course.slice(0, 10); // slice/cut a string from index 0 to index 10 (index 10 not incudes) and store it in slicedStr => JavaScript
 
 let course3 = "JavaScript is not cool";
 const replacedStr = course3.replace("not", "so"); // find a word 'not and replace it with word 'so' then store the result in replacedStr => JavaScript is so cool

@@ -28,7 +28,7 @@ const items = [
 // items.filter(): filter/get all items with price is less or equal 100  and store in a new array(filterdItem)
 // check evey item in this array and add it to the new array if item.price is less or equal 100
 const filterdItem = items.filter((item) => {
-  return item <= 100; // return a condition
+  return item.price <= 100; // return a condition
 });
 
 console.log("filterdItem", filterdItem);
