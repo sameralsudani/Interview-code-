@@ -97,4 +97,4 @@ array.length = 3; // [0,1,2]
 
 // Last item in array
 let array3 = [0, 1, 2, 3];
-array.slice(-1); // 3
+array.slice(-1); // [3]

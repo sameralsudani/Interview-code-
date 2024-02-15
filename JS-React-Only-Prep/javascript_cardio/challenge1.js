@@ -2,16 +2,16 @@
 let obj = { id: "1", name: "user22", age: "26", work: "programmer" };
 
 //Method 1: Convert the keys to Array using - Object.keys()
-console.log(Object.keys(obj));
+console.log(Object.keys(obj));  // returns array of keys
 // ["id", "name", "age", "work"]
 
 // Method 2 Converts the Values to Array using - Object.values()
-console.log(Object.values(obj));
+console.log(Object.values(obj));  // returns array of values
 // ["1", "user22r", "26", "programmer"]
 
 // Method 3 Converts both keys and values using - Object.entries()
-console.log(Object.entries(obj));
-//[["id", "1"],["name", "user22"],["age", "26"],["work", “programmer"]]
+console.log(Object.entries(obj)); // returns array of key-value arrays
+//[["id", "1"],["name", "user22"],["age", "26"],["work", “programmer"]] 
 
 /////////////////////////////
 // Write the code to find the vowels
@@ -30,8 +30,8 @@ console.log(findVowels("samer")); // 2
 ////////////////////////
 // Five ways to clone arrays in JavaScript
 const clone = (arr) => arr.slice(0);
-const clone2 = (arr) => [...arr];
-const clone3 = (arr) => Array.from(arr);
+const clone2 = (arr) => [...arr]; // returns a clone array
+const clone3 = (arr) => Array.from(arr);  // returns a clone array
 const clone4 = (arr) => arr.map((x) => x);
 const clone5 = (arr) => arr.concat([]);
 

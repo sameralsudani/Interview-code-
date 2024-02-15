@@ -71,7 +71,7 @@ function countLetters(str) {
     let count = 1;
 
     for (let i = 0; i < array.length; i++) {
-        if (tempArr[i] === temp[i+1]) {
+        if (tempArr[i] === tempArr[i+1]) {
             count++
         } else {
             let value= `${count}${tempArr[i]}`;
@@ -88,17 +88,27 @@ console.log(countLetters('ffffeerttttooo'))  // 4f2e1r4t3o
 
 
 ///////////////////////
-// return true if the number is Prime otherwise false 
-// Prime number can only be divided by itself or o 1 evenly (always remainder)
-// ex: 11 % 2 = 0 // 1
-// ex: 11 % 3 = 2 //  2
-// ex: 11 % 4 = 2 //  3
-// 11 is prime (always remainder)
 
-// ex: 8 % 2 = 0 // 0
-// ex: 8 % 3 = 2 //  2
-// ex: 8 % 4 = 2 //  0
-// 11 is not prime (not always remainder)
+// return true if the number is Prime otherwise false 
+
+// Note: a number is prime if:
+// 1- it can only be divided by itself or 1 without remainder 
+// ex: 11 % 11 = 0 // no remainder
+// ex: 11 % 1 = 0 // no remainder
+
+// 2- if it's divided by any other number, we get a remainder 
+// ex: 11 % 2 = 1 // remainder 
+// ex: 11 % 3 = 2 // remainder 
+// ex: 11 % 4 = 2 // remainder 
+
+// 11 is prime
+
+// ex: 8 % 8 = 0 // no remainder
+// ex: 8 % 1 = 0 // no remainder
+// ex: 8 % 2 = 0 // no remainder
+// ex: 8 % 3 = 2 // remainder 
+// ex: 8 % 4 = 0 // no remainder
+// 8 is not prime 
 
 function isPrime(num) {
     if (num < 2) {

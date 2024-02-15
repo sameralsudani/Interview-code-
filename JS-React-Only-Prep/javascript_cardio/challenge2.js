@@ -63,7 +63,7 @@ console.log(removeEveryOther([1, 4, 8, 6, 7])); // [1,8,7]
 // Write a javaScrpit program to count charecters in your string
 function count(str) {
   const count = {};
-  str.split(" ").forEach((char) => {
+  str.split("").forEach((char) => {
     count[char] = count[char] ? count[char] + 1 : 1;
   });
   return count;

@@ -81,6 +81,8 @@ function flattenArray(arrays) {
   return arrays.flat(Infinity);
 }
 
+///////////////////
+
 // CHALLENGE 4: ANAGRAM
 // An anagram of a string is another string that contains the same characters, only the order of characters can be different. For example, “abcd” and “dabc” are an anagram of each other.
 
@@ -102,6 +104,8 @@ function formatStr(str) {
     .join('');
 }
 
+/////////////
+
 // CHALLENGE 5: LETTER CHANGES
 // Change every letter of the string to the one that follows it and capitalize the vowels
 // Z should turn to A
@@ -121,7 +125,6 @@ function letterChanges(str) {
   return newStr;
 }
 
-// Call Function
 const output = letterChanges('Hello There');
 
 console.log(output); // Ifmmp UIfsf
